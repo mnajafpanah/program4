@@ -1,0 +1,31 @@
+// CS371
+// Program4
+
+I found the following errors:
+
+In the Circle.java file Line 37:
+The factor by which the circle was being scaled was only being added to the radius of the circle. This was not changing the size of the circle by the factor. This was identified on the doubleSize test which found that inputting a factor of 2 was not doubling the radius of the circle.
+
+*****************************************************************************************
+In the Circle.java file Line 52:
+The center.y was being changed to sum of itself and xOffset rather than the yOffset. This was identified by the “simplePositiveMoveXOnly” test. We expected that this test may only change the x coordinate but it changed both.
+
+*****************************************************************************************
+In the Circle1.java file Line 16:
+The added if statement to handle cases when a circle is inside another circle but not touching edges. This was identified by “containedAway” test. So, this test had a circle within the first that did not touch edges anywhere but the intersects function return true value.
+*****************************************************************************************
+In the Circle1.java file Line 20:
+The if statement for intersect to be true was checking when the x distance between centers was less than the radius of 1st circle and y distance between centers was less than the radius. This haven’t check when the circles intersected and was identified by “overlapIntersect” test.
+
+*****************************************************************************************
+In the Circle2.java Line 10:
+“super” call to constructor interchanged the x and y coordinates. This was identified by the “simpleMove” test. As x and y coordinates were expected to both change to certain values this indicate that x and y coordinates were not being set correctly.
+*****************************************************************************************
+
+In the Circle2.java Line 20:
+A new condition has been added to handle cases if a circle is inside another circle but not touching edges. This was identified by the “containedAway” test. So this test had a circe within the 1st circle that did not touch edges anywhere however the intersects function 
+return true value.
+
+*****************************************************************************************
+In the Circle2.java Line 25:
+the if statement for the intersect to be true check for when “d” was less than radius of the 1st circle. Therefore, this hasn’t identify that the overlapping circles were intersecting and was found by “overlapIntersect” test.
